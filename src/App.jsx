@@ -45,11 +45,13 @@ function App() {
         <SearchBar onSearch={handleSearch} loading={loading} />
         
         <div className="mt-8 space-y-8">
+          {/* {loading} */}
+          {loading && <Loading />}
           {error && <Error message={error} />}
           {user && (
             <Suspense fallback={<div className="text-center"><Loading /></div>}>
-              <Profile user={user} />
-              <Repo repos={topRepos} />
+              <Profile loading={loading}/>
+              <Repo loading={loading}/>
             </Suspense>
           )}
         </div>

@@ -50,8 +50,8 @@ function App() {
           {error && <Error message={error} />}
           {user && (
             <Suspense fallback={<div className="text-center"><Loading /></div>}>
-              <Profile loading={loading}/>
-              <Repo loading={loading}/>
+              <Profile loading={loading} user={user}/>
+              <Repo loading={loading} repos={repos}/>
             </Suspense>
           )}
         </div>

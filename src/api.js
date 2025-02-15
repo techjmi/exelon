@@ -8,6 +8,7 @@ export const fetchUser = async (username) => {
     const response = await axios.get(`https://api.github.com/users/${username}`,{
         headers,
     });
+    // console.log(response.data)
     return response.data;
   } catch (error) {
     throw new Error("User not found");
@@ -23,6 +24,7 @@ export const fetchTopRepos = async (username) => {
           headers,
         }
       );
+    //   console.log(response.data)
       return response.data;
     } catch (error) {
       console.error("Error fetching repositories:", error);

@@ -1,8 +1,61 @@
-# React + Vite
+# GitHub User Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GitHub User Finder is a React application that allows users to search for GitHub profiles and view their details along with the top 5 repositories.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Stack
+- React (Vite)
+- Axios
+- Tailwind CSS
+- GitHub API
+- Skeleton UI with Lazy Loading
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🗂️ Folder Structure
+```
+.
+├── public
+├── src
+    ├── api
+    │   └── api.js
+    ├── components
+    │   ├── SearchBar.js
+    │   ├── Profile.js
+    │   ├── Repo.js
+    │   ├── Error.js
+    │   └── Loading.js
+    ├── App.js
+    ├── main.jsx
+    └── index.css
+├── .env
+└── package.json
+```
+
+## ⚙️ Environment Variables
+Create a `.env` file in the root directory:
+```
+VITE_GITHUB_TOKEN=your_github_token
+```
+
+## 🚀 Installation and Running the App
+```bash
+# Clone the repository
+git clone https://github.com/techjmi/exelon
+
+# Navigate to the project directory
+cd exelon, client
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+```
+
+## 🧪 Features
+- Search GitHub profiles by username
+- Display profile details (avatar, followers, following)
+- List top 5 repositories (sorted by stars)
+- Skeleton loading for better UX
+- Error handling for invalid users or API errors
+
+
+
